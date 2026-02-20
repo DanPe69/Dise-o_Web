@@ -1,0 +1,91 @@
+/*////////////////////
+Congigurar
+////////////////////*/
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+
+    background-color: antiquewhite;
+
+}
+
+.navbar{
+    background-color: bisque;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+}
+
+.navbar img{
+    width: 80px;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.banner{
+    background-color: rgb(255, 168, 127); 
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.producto img{
+    width: 200px;
+}
+
+.producto{
+    background-color: rgb(255, 123, 0);
+    padding: 10vh 5vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    gap: 1%;
+    justify-content: space-around;
+}
+
+.producto .card{
+    background-color: brown;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.comentario{
+    background-color: coral;
+    padding: 100px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    
+}
+
+
