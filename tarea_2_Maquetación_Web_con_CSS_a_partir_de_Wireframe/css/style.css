@@ -1,0 +1,171 @@
+/*////////////////////
+Hoja de Estilos
+////////////////////*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    background-color:  lightgray;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    padding: 15px 0;
+}
+
+.navbar ul{
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar img{
+    width: 100px;
+}
+
+.banner{
+    background-color: #1b5e20;
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 20px;
+}
+
+.banner h1{
+    margin-bottom: 15px;
+}
+
+.grupo{
+    background-color: lightgray;
+    padding: 60px 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.grupo img{
+    width: 200px;
+    margin-top: 5px;
+
+}
+
+.personajes{
+    background-color: #1b5e20;
+    margin-top: 5px;
+
+    padding: 15px;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 250px;
+    text-align: center;
+}
+
+.armario{
+    background-color: #1b5e20;
+    margin-top: 5px;
+
+
+    padding: 60px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.testimonios{
+    background-color: lightgray;
+    padding: 60px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.bio{
+    background-color: #1b5e20;
+    padding: 60px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.bio img{
+    width: 150px;
+}
+
+.contacto{
+    background-color: lightyellow;
+    padding: 60px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    text-align: center;
+}
+
+footer{
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: #eb1809;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px){
+
+    .navbar ul{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .grupo{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bio{
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
