@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: #2C2B2B;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 10px 40px;
+
+}
+
+nav img{
+    width: 45px;
+}
+
+.btn-amarillo {
+    background-color: #FFBC0D;
+    cursor: pointer;
+    padding: 12px 50px;
+    border-radius: 10px;
+}
+
+.btn-amarillo:hover{
+    background-color:#fac43b ;
+}
+
+.firts {
+    background-color: #2C2B2B;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding: 60px;
+    gap: 20px; 
+
+    color: white;
+}
+
+.menu1 ul {
+    display: flex;
+    flex-direction: row; 
+    list-style: none;    
+    gap: 20px;           
+    padding: 0;
+    
+}
+
+.menu1 li {
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.second {
+    background-color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    flex-wrap: wrap;        
+    gap: 60px;             
+    padding: 40px;
+
+}
+
+.producto {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    width: 80px;           
+    text-align: center;
+}
+
+.producto img {
+    width: 60px;           
+    height: auto;
+    margin-bottom: 10px;    
+}
+
+.third {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    width: 100%; 
+    gap: 0;
+}
+
+.third .imagen {
+    flex: 1; 
+}
+
+.third img {
+    width: 100%; 
+    height: auto;
+    display: block; 
+}
+
+.servicios {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 85px;
+    margin-left: 150px;
+    gap: 40px;
+}
+
+.servicios .card1 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 400px;
+    margin-top: 70px;
+    font-family: Arial, sans-serif;
+}
+
+.servicios .card2 {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    width: 400px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.servicios .card3 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    margin-top: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.servicios .card1 h2 {
+    margin-right: 60px;
+    text-shadow: 1px 0 black, -1px 0 black;
+
+}
+
+.servicios .card2 h2 {
+    margin-right: 60px;
+    text-shadow: 1px 0 black, -1px 0 black;
+
+}
+
+.servicios .card3 h2 {
+    margin-right: 60px;
+    text-shadow: 1px 0 black, -1px 0 black;
+
+}
+
+.imagen {
+    display: flex;
+    justify-content: center;
+    margin-top: 125px;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 485px;
+}
+
+.lista h1 {
+    font-weight: 900;            
+    font-size: 40px;
+}
+
+.lista .items {
+    display: flex;
+    flex-direction: row;
+    gap: 470px;
+    margin: 42px;
+    align-items: center;
+}
+
+.lista .opciones ul {
+    display: flex;
+   flex-direction: column;
+   gap: 39px; 
+  list-style-type: none;   
+  padding: 0%;
+  margin: 0%;
+}
+
+.lista .simbolos  {
+   display: flex;
+   flex-direction: column;
+   gap: 39px; 
+}
+
+.simbolos {
+    font-weight: bold;
+}
+
+.btns-grises{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.blanco1, .blanco2{
+    background-color: white;
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.blanco1:hover, .blanco2:hover{
+    background-color: #FFBC0D;
+}
+
+.registro{
+    background-color: #FFC300;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.registro-texto p{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.registro-texto h2{
+    margin: 5px 0;
+    font-family: sans-serif;
+}
+
+.registro-boton button{
+    padding: 10px 60px;
+    border: 1px solid black;
+    background-color: #E5E5E5;
+    cursor: pointer;
+    font-family: sans-serif;
+    border-radius: 5px;
+}
+
+.registro-boton:hover button{
+    background-color: #fafafa;
+    border-radius: 5px;
+}
+
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #D9D9D9;
+    justify-content: space-around;
+    padding: 80px 60px;
+    gap: 10px;
+}
+
+.footer-logo img{
+    width: 70px;
+}
+
+.footer-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-col h3{
+    margin-bottom: 10px;
+}
+
+.footer-col p{
+    margin: 20px;
+
+}
+
+.footer-col ul{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col li{
+    margin: 20px 0;
+}
+
+.redes img{
+    width: 25px;
+    margin-right: 10px;
+}
+
+.apps img{
+    width: 120px;
+    margin-right: 10px;
+}
+
+
+.footer-links a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.footer-bottom{
+    width: 100%;
+    border-top: 2px solid #5A6C8E;
+    margin-top: 40px;
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+}
