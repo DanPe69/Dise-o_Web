@@ -104,7 +104,8 @@ section {
     /* LAS REBANADAS (Grid repeat)
        Vida real: "Cortar una pizza". Divide el espacio en partes idénticas. */
 
-    gap: 15px;
+    gap: 15px; /* (El Aire)El gap es el pasillo o el espacio de aire que hay entre las cajas. */
+    /* Ahora hay mucho más espacio entre ellas */
 }
 
 /* ================================================
