@@ -1,0 +1,130 @@
+/* ============================================================
+   RESET GENERAL
+   Quita márgenes raros que vienen por defecto
+   ============================================================ */
+
+/* ============================================================
+   ETIQUETA (El objeto por naturaleza)
+   Ejemplo: "Todos los perros comen"
+   En CSS: Se escribe el nombre tal cual (nav, p, div).
+   Afecta a todos los elementos del mismo tipo en TODA la web.
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    color: black; /* Todos los párrafos serán negros por defecto */
+}
+
+/* ============================================================
+   CLASE (El grupo que tú eliges)
+   Ejemplo: "Solo los perros con collar rojo"
+   En CSS: Se escribe con un PUNTO adelante (.collar-rojo).
+   Afecta SOLO a los elementos que tengan ese nombre en el HTML.
+   ============================================================ */
+.collar-rojo {
+    color: red; /* Solo los elementos con esta clase serán rojos */
+}
+
+
+/* ================================================
+   NAV - La barra de navegación
+   ================================================ */
+nav {
+    display: flex;
+    /* EL INTERRUPTOR (Flex)
+       Vida real: "Prender la luz". Sin esto, no puedes acomodar nada. */
+
+    justify-content: space-between;
+    /* PAREDES OPUESTAS (Space-between)
+       Vida real: "Imanes que se repelen". Uno a la izquierda y otro a la derecha. */
+
+    padding: 20px;
+    background-color: #2d2d2d;
+    color: white;
+}
+
+/* ================================================
+   MENÚ DE NAVEGACIÓN
+   ================================================ */
+.navMenu ul {
+    display: flex;
+    /* EL INTERRUPTOR (Flex)
+       Vida real: "Prender la luz". Sin esto, no puedes acomodar nada. */
+
+    list-style: none; /* Quita los puntitos de la lista */
+    gap: 20px; /* Espacio entre links */
+}
+
+
+/* ================================================
+   SECTION - Las habitaciones de la página
+   ================================================ */
+section {
+    padding: 50px 10%;
+
+    display: flex;
+    /* EL INTERRUPTOR (Flex)
+       Vida real: "Prender la luz". Sin esto, no puedes acomodar nada. */
+
+    align-items: center;
+    /* EL NIVELADOR (Align-items)
+       Vida real: "Alinear cuadros". Para que nada quede más arriba que lo otro. */
+
+    gap: 30px;
+}
+
+/* ================================================
+   .texto1, .imagen1, etc. - Los bloques de 50/50
+   ================================================ */
+.texto1, .imagen1, .imagen3, .texto3 {
+    flex: 1;
+    /* NIVELADOR DE ESPACIO: Divide el ancho en partes iguales automáticamente.
+       2 elementos con flex:1 = 50% cada uno. Sin calcular nada. */
+}
+
+.imagen1 img, .imagen3 img {
+    width: 100%; /* La imagen se adapta al tamaño de su caja (div) */
+    border-radius: 10px; /* Redondea las esquinas */
+}
+
+
+/* ================================================
+   .five - La cuadrícula de productos
+   ================================================ */
+.five {
+    display: grid;
+    /* MODO REJILLA: Para organizar en filas y columnas al mismo tiempo. */
+
+    grid-template-columns: repeat(4, 1fr);
+    /* LAS REBANADAS (Grid repeat)
+       Vida real: "Cortar una pizza". Divide el espacio en partes idénticas. */
+
+    gap: 15px; /* (El Aire)El gap es el pasillo o el espacio de aire que hay entre las cajas. */
+    /* Ahora hay mucho más espacio entre ellas */
+}
+
+/* ================================================
+   .producto - Cada tarjetita de producto
+   ================================================ */
+.producto {
+    border: 1px solid #ddd; /* Borde finito gris alrededor de la tarjeta */
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px; /* Esquinas redondeadas */
+}
+
+
+/* ================================================
+   FOOTER - El sótano
+   ================================================ */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #eee; /* Gris clarito para diferenciarlo del contenido */
+    margin-top: 50px; /* Espacio encima del footer para que no quede pegado */
+}

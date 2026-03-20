@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: rgb(255, 177, 238);
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+nav .navMenu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    flex-direction: row;
+
+    gap: 20px;
+}
+
+nav img{
+    width: 100px;
+}
+
+.navMenu ul{
+    gap: 50px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.first{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+.first img{
+    width: 50vh;
+}
+
+.first .texto1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.second{
+    padding: 20px;
+    margin: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+
+.third img{
+    width: 60vh;
+}
+
+.third{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.third .texto3{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
