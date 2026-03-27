@@ -5,10 +5,12 @@ var DescansarPlayer = 4;
 var lifeEnemy = 30;
 var AtkEnemigo = 8;
 
+
 function EjecutarAccion(danioBotón) {
     AtkPlayer = danioBotón; 
     Atacar();
 }
+
 
 function Atacar(){
     ATK_Player();
@@ -38,6 +40,7 @@ function Descansar_Player(){
 }
 
 function ATK_Enemigo(){
+    // Solo ataca si el enemigo sigue vivo
     if (lifeEnemy > 0) {
         var isEnemy = Math.random()*10;
         if(isEnemy >= 2){
@@ -50,8 +53,6 @@ function ATK_Enemigo(){
         }
     }
 }
-
-// (IMAGEN Y VISUALIZACIÓN)
 
 function ActualizarPantalla() {
     document.getElementById("lifeEnemy").innerHTML = "Vida Enemigo: " + Math.round(lifeEnemy);
@@ -66,10 +67,10 @@ function FinalizarJuego(estado) {
     elementoImg.style.display = "block";
 
     if (estado === "GANASTE") {
-        //Victoria
+        //victoria
         elementoImg.src = "./assets/ganaste.png";
     } else {
-        //Derrota
+        //derrota
         elementoImg.src = "./assets/perdiste.png";
     }
 }
