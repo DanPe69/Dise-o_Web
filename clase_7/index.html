@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea: Juego de Batalla</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <h1>Batalla RPG</h1>
+
+    <h2 id="lifeEnemy">Vida Enemigo: 30</h2>
+    <h4 id="lifePlayer">Tu Vida: 30</h4>
+
+    <hr>
+
+    <button type="button" onclick="EjecutarAccion(5)">Ataque Normal</button>
+    <button type="button" onclick="EjecutarAccion(10)">Ataque Fuerte</button>
+    <button type="button" onclick="EjecutarAccion(2)">Ataque Rápido</button>
+    <button type="button" onclick="EjecutarAccion(20)">Ataque Especial</button>
+
+    <br><br>
+
+    <button type="button" onclick="Descansar()">Descansar (Recuperar Vida)</button>
+
+    <hr>
+    
+    <div id="resultado">
+        <p id="mensaje"></p>
+        <img id="imgFinal" src="" style="width: 200px; display: none;">
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
