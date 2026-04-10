@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Precolombina</title>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.183.2/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.183.2/examples/jsm/"
+        }
+    }
+    </script>
+
+    <link rel="icon" href="./assets/icono.png" type="image/png">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header class="banner">
+        <div class="overlay">
+            <h1>Culturas Doradas</h1>
+            <p>El arte y la ingeniería del pasado</p>
+        </div>
+    </header>
+
+    <nav class="navMenu">
+        <ul>
+            <li><a>Inicio</a></li>
+            <li><a>Historia</a></li>
+            
+            <li class="logo-central">
+                <img src="./assets/icono.png" alt="Logo" width="50">
+            </li>
+            
+            <li><a>Culturas</a></li>
+            <li><a>Arte y Cultura</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <aside class="sidebar">
+            <h3>Civilizaciones</h3>
+            <ul>
+                <li><a>Muiscas</a></li>
+                <li><a>Tayronas</a></li>
+                <li><a>Quimbayas</a></li>
+            </ul>
+        </aside>
+
+        <main class="content-area">
+            <section class="info-block">
+                <h2>Territorio</h2>
+                <p>Ubicación geográfica de los asentamientos principales.</p>
+            </section>
+
+            <section class="info-block">
+                <h2>Orfebrería</h2>
+                <p>Técnicas de fundición y piezas emblemáticas en oro.</p>
+            </section>
+
+            <section class="info-block">
+                <h2>Tradiciones</h2>
+                <p>Mitos, leyendas y organización social de la época.</p>
+            </section>
+        </main>
+
+    </div>
+
+    <section class="flex-block">
+        <div id="visor-cono" class="visor-pequeno"></div>
+        <div class="texto-bloque">
+            <h2>El Cono Ceremonial</h2>
+            <p>Representación de las jerarquías en las culturas doradas.</p>
+        </div>
+    </section>
+
+    <section class="flex-block reverse">
+        <div id="visor-cubo" class="visor-pequeno"></div>
+        <div class="texto-bloque">
+            <h2>El Cubo de Piedra</h2>
+            <p>Base fundamental de las estructuras arquitectónicas precolombinas.</p>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>Proyecto Maquetación Web - 2026</p>
+    </footer>
+
+    <script type="module" src="cono.js"></script>
+    <script type="module" src="cubo.js"></script>
+
+</body>
+</html>

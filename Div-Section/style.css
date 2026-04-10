@@ -1,0 +1,52 @@
+/* 1. Reset básico para que no haya márgenes extraños */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Estilos para los SECTIONS (Los bloques grandes) */
+section {
+  padding: 80px 0;      /* Espacio arriba y abajo para que respire */
+  text-align: center;   /* Centra el texto por defecto */
+  border-bottom: 1px solid #eee;
+}
+
+/* Estilos para los DIVS (Los organizadores) */
+
+/* 1. El que alinea los 3 servicios */
+.services-row {
+  display: flex;         /* Activa el modo "poner en fila" */
+  justify-content: center; 
+  gap: 30px;            /* Espacio entre los div hijos */
+  margin-top: 40px;
+}
+
+.service-card {
+  width: 250px;
+  height: 180px;
+  border: 2px solid #333;
+  display: flex;         /* También usamos flex aquí para centrar el texto adentro */
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2. El que divide el About Us en dos columnas */
+.about-flex {
+  display: flex;         /* Divide la sección en dos columnas */
+  max-width: 1000px;     /* Para que no sea demasiado ancho */
+  margin: 0 auto;        /* Centra todo el bloque en la pantalla */
+}
+
+.about-text, .about-map {
+  flex: 1;               /* Hace que ambos div midan lo mismo (50% y 50%) */
+  padding: 20px;
+  text-align: left;
+}
+
+.about-map {
+  background-color: #f4f4f4;
+  height: 250px;
+  border: 1px solid #ccc;
+}
