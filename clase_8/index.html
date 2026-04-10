@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto 3D</title>
+    <link rel="stylesheet" href="style.css"> 
+    
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.183.2/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.183.2/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <section class="About">
+        <div class="About-Info">
+            <h2>Cubo 3D</h2>
+            <p>Este es el contenedor del cubo.</p>
+        </div>
+        <div class="About-interactive" id="About-interactive"></div>
+    </section>
+    
+    <section class="banner" id="nanner">
+        <h2>Cono 3D</h2>
+        <p>Este es el contenedor del cono amarillo.</p>
+    </section>
+
+    <script type="module" src="cubo.js"></script> 
+    <script type="module" src="cono.js"></script>
+</body>
+</html>

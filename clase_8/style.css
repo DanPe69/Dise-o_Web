@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    color: white;
+    font-family: sans-serif;
+}
+
+.About {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.About-interactive {
+    width: 45%;    
+    height: 50vh;
+    background: #222; /* Para ver dónde está el área de dibujo */
+}
+
+.banner {
+    width: 100%;
+    height: 80vh; /* Un poco más de aire para la sección */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #111; 
+}
+
+/* Este es el truco para que el canvas no se vea gigante */
+#nanner canvas {
+    width: 400px !important;  /* Tamaño fijo o máximo */
+    height: 300px !important; /* Altura controlada */
+    border-radius: 12px;      /* Bordes redondeados para que se vea moderno */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra para darle profundidad */
+    margin-top: 20px;
+}
