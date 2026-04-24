@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial Diseño Web - Estética Retro</title>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.183.2/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.183.2/examples/jsm/"
+        }
+    }
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <link rel="icon" href="./assets/icono.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero-retro">
+        <div class="crt-overlay">
+            <div class="hero-content">
+                <h1 class="glitch-text">MATRIX_RELOADED.EXE</h1>
+                <p>SISTEMA DE MAQUETACIÓN MULTIMEDIA 2026</p>
+                <div class="blink-line"></div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navMenu">
+        <ul>
+            <li><a>TERMINAL</a></li>
+            <li><a>ARCHIVOS</a></li>
+            <li class="logo-central">
+                <span class="retro-logo">[SYS]</span>
+            </li>
+            <li><a>REDES</a></li>
+            <li><a>OUTPUT</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Navegación</h3>
+            <ul>
+                <li><a>Sistemas 3D</a></li>
+                <li><a>Gráficos 2D</a></li>
+                <li><a>Documentación</a></li>
+            </ul>
+        </aside>
+
+        <main class="content-area">
+            <section class="info-block">
+                <h2>Interactividad</h2>
+                <p>Implementación de eventos de ratón y scroll para manipular elementos en tiempo real.</p>
+            </section>
+            <section class="info-block">
+                <h2>Maquetación</h2>
+                <p>Uso de CSS Grid para la estructura principal y Flexbox para secciones dinámicas.</p>
+            </section>
+            <section class="info-block">
+                <h2>Estética</h2>
+                <p>Inspiración en interfaces de usuario de los años 80 y 90 (estética Retro).</p>
+            </section>
+        </main>
+    </div>
+
+    <section class="flex-block">
+        <div id="visor-cono" class="visor-pequeno"></div>
+        <div class="texto-bloque">
+            <h2>Renderizado 2D (p5.js)</h2>
+            <p>Representación de un entorno urbano digitalizado utilizando primitivas geométricas.</p>
+        </div>
+    </section>
+
+    <section class="flex-block reverse">
+        <div id="visor-cubo" class="visor-pequeno"></div>
+        <div class="texto-bloque">
+            <h2>Motor 3D (Three.js)</h2>
+            <p>Visualización de un objeto tridimensional con respuesta a eventos de clic, movimiento de mouse y scroll.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Proyecto Maquetación Web - Universidad de San Buenaventura - 2026</p>
+    </footer>
+
+    <script type="module" src="main_cono.js"></script> 
+    <script type="module" src="main_cubo.js"></script> 
+</body>
+</html>

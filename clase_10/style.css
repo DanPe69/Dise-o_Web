@@ -1,0 +1,4 @@
+.Ejemplo{
+    display: flex;
+    flex-direction: column;
+}

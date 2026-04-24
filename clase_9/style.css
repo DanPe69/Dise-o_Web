@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: sans-serif;
+}
+
+.cubo{
+    display: flex;
+
+    width: 100vw;
+    height: 100vh;
+
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    color: aqua;
+    font-size: 100px;
+
+}
+
+.parte1{
+    width: 100vw;
+    height: 50vh;
+}
+
+.parte2{
+    width: 100vw;
+    height: 200vh;
+}
+
+canvas{
+    position: fixed; 
+    top: 0;  left: 0; 
+    width: 100%;  height: 100%;
+    z-index: -1;  
+    pointer-events: none;
+}
