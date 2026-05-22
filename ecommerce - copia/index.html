@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footwear - E-commerce</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.prod.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     
+    <div id="app">
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="#">NEW ARRIVAL</a>
+                <a href="#">MEN</a>
+                <a href="#">WOMAN</a>
+                <a href="#">KIDS</a>
+                <a href="#">SHOP</a>
+            </div>
+            <div class="logo">FOOTWEAR</div>
+            <div class="nav-icons">
+                <span>🔍</span>
+                <span>❤️</span>
+                <span class="cart-icon">🛒 <span class="badge">{{ carrito.length }}</span></span>
+            </div>
+        </nav>
+
+        <header class="hero-banner">
+            <div class="hero-texto">
+                <h1>GET READY FOR SUMMER VIBES</h1>
+                <a href="#" class="btn-shop">SHOP COLLECTION →</a>
+            </div>
+            <div class="hero-imagen">
+                <img src="imagenes/banner.jpg" alt="Summer Vibes">
+            </div>
+        </header>
+
+        <section class="seccion-categorias">
+            <h2>Find Categories You Looking For</h2>
+            <div class="grid-categorias">
+                <div class="columna-cat">
+                    <img src="imagenes/cat-izq.jpg" alt="Categoría Izquierda">
+                </div>
+                <div class="columna-enlaces">
+                    <h3>NEW ARRIVAL</h3>
+                    <ul>
+                        <li>Footwear</li>
+                        <li>Trending</li>
+                        <li>Converse</li>
+                        <li>Accessories</li>
+                    </ul>
+                </div>
+                <div class="columna-cat">
+                    <img src="imagenes/cat-der.jpg" alt="Categoría Derecha">
+                </div>
+                <div class="columna-enlaces">
+                    <h3>ON SERVICE</h3>
+                    <ul>
+                        <li>Top Printing</li>
+                        <li>Folding</li>
+                        <li>Poly Bagging</li>
+                        <li>Hang Tags</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-productos">
+            <h2>Buy Best Quality Shoes</h2>
+            <p class="subtitulo">Inspired by the mans footwear. Brings all-new mega special collection.</p>
+            
+            <div class="contenedor-vitrina">
+                <div class="filtros-laterales">
+                    <h3>Collection Type</h3>
+                    <ul>
+                        <li class="activo">Trending</li>
+                        <li>Footwear</li>
+                        <li>Polos & T-shirt</li>
+                        <li>Accessories</li>
+                        <li>Converse</li>
+                    </ul>
+                </div>
+
+                <ul class="lista-productos">
+                    <li v-for="(item, index) in productos" :key="index" class="tarjeta-producto">
+                        <div class="imagen-producto">
+                            <img v-bind:src="'imagenes/' + item.imagenLocal" v-bind:alt="item.nombre">
+                        </div>
+                        <div class="info-producto">
+                            <h4>{{ item.nombre }}</h4>
+                            <p class="precio">${{ item.precio }}</p>
+                            <button class="btn-agregar" v-on:click="agregarAlCarrito(item)">
+                                Agregar al Carrito
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="seccion-carrito" v-if="carrito.length > 0">
+            <h3>Tu Carrito de Compras</h3>
+            <ul>
+                <li v-for="(item, index) in carrito">
+                    {{ item.nombre }} - ${{ item.precio }}
+                    <button class="btn-quitar" v-on:click="quitarDelCarrito(index)">X</button>
+                </li>
+            </ul>
+            <p class="total">Total a Pagar: <strong>${{ totalCarrito }}</strong></p>
+        </section>
+
+        <section class="seccion-testimonios">
+            <h2>Customer's Kinds Word</h2>
+            <div class="contenedor-testimonios">
+                <div class="tarjeta-testimonio">
+                    <div class="avatar">
+                        <img src="imagenes/usuario1.jpg" alt="User">
+                    </div>
+                    <div class="testimonio-texto">
+                        <p>"I really like them. I'm going to get more of them. I really like the Converse and they are comfortable."</p>
+                        <span>— Osman Gazi, UI/UX Designer</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-tienda">
+            <div class="footer-fila">
+                <div class="footer-box-suscripcion">
+                    <h3>Buy Best Quality Shoes</h3>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="tu_correo@gmail.com">
+                        <button>Subscribe →</button>
+                    </div>
+                </div>
+                <div class="footer-enlaces">
+                    <h4>Pages</h4>
+                    <a href="#">Shop</a>
+                    <a href="#">Collection</a>
+                    <a href="#">New Arrival</a>
+                </div>
+                <div class="footer-enlaces">
+                    <h4>Company</h4>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="footer-enlaces">
+                    <h4>Follow</h4>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+            <p class="copyright">Copyright © 2026 Footwear. All Right Reserved</p>
+        </footer>
+    </div>
+
+    <script src="./JS/ecommerce.js"></script>
+</body>
+</html>
