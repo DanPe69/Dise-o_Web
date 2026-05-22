@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js Simple App - Universidad</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.prod.js"></script>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+     
+    <div id="app">
+        <h1>Lista de Tareas Universitarias</h1>
+        
+        <div class="formulario">
+            <input type="text" v-model="nuevaTarea" placeholder="Nueva entrega o taller...">
+            <button v-on:click="agregarTarea">Agregar</button>
+        </div>
+
+        <ul>
+            <li v-for="(tarea, index) in tareas">
+                <strong>[{{ tarea.materia }}]</strong> {{ tarea.titulo }} 
+                
+                <button v-on:click="eliminarTarea(index)">X</button>
+            </li>
+        </ul>
+
+    </div>
+
+    <script src="./list1.js"></script>
+</body>
+</html>

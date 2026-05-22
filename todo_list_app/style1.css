@@ -1,0 +1,116 @@
+/* Estilos generales para centrar la app en pantalla */
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin: 0;
+}
+
+/* Caja contenedora (estilo celular/tarjeta) */
+.contenedor-principal {
+    background-color: #ffffff;
+    width: 380px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado */
+.encabezado h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+.encabezado p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Formulario de entrada */
+.formulario {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos uno abajo del otro */
+    gap: 10px;              /* Separa el input, el select y el botón */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.formulario input, .formulario select, .formulario button {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.formulario button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.formulario button:hover {
+    background-color: #0056b3;
+}
+
+/* Lista de tareas */
+.lista-tareas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Cada fila de tarea */
+.tarjeta-tarea {
+    background-color: #f9f9f9;
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between; /* Texto a la izquierda, botón borrar a la derecha */
+    align-items: center;
+    border: 1px solid #eee;
+}
+
+/* Checkbox + Texto agrupados */
+.contenido-tarea {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.texto-tarea p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.etiqueta-materia {
+    font-size: 11px;
+    color: #888;
+    font-weight: bold;
+    display: block;
+}
+
+/* Clase para cuando la tarea esté chequeada */
+.tachado {
+    text-decoration: line-through;
+    color: #aaa !important;
+}
+
+/* Botón de eliminar */
+.btn-eliminar {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-eliminar:hover {
+    background-color: #cc0000;
+}

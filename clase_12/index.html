@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicube - Ficha de Producto</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.prod.js"></script>
+    <link rel="stylesheet" href="./CSS/estilos.css">
+
+</head>
+
+<body>
+      
+    <div id="app" class="product-page">
+        <div class="gallery">
+            <div class="main-view">
+                <img :src="selectedVariant.image" :alt="productName">
+            </div>
+        </div>
+
+        <div class="info">
+            <span class="brand">Visita la tienda de {{ brand }}</span>
+            <h1>{{ productName }}</h1>
+            
+            <div class="price-container">
+                <span class="discount-pct">-{{ selectedVariant.discount }}%</span>
+                <span class="price-symbol">COP</span>
+                <span class="price-value">{{ formatPrice(selectedVariant.price) }}</span>
+            </div>
+            <p class="old-price">
+                Precio recomendado: <s>COP {{ formatPrice(selectedVariant.oldPrice) }}</s>
+            </p>
+
+            <div class="selector">
+                <p>Tamaño: <strong>{{ selectedSize }}</strong></p>
+                <div class="chips">
+                    <button 
+                        v-for="size in sizes" 
+                        :key="size"
+                        @click="cambiarTamano(size)"
+                        :class="{ active: selectedSize === size }"
+                    >
+                        {{ size }}
+                    </button>
+                </div>
+            </div>
+
+            <div class="variants">
+                <p>Color: <strong>{{ selectedVariant.colorName }}</strong></p>
+                <div class="variant-grid">
+                    <div 
+                        v-for="variant in variants" 
+                        :key="variant.id"
+                        class="variant-card"
+                        :class="{ selected: selectedVariant.id === variant.id }"
+                        @click="seleccionarVariante(variant)"
+                    >
+                        <img :src="variant.thumb" alt="Miniatura">
+                        <p>COP {{ formatPrice(variant.price) }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./JS/medicube.js"></script>
+</body>
+</html>

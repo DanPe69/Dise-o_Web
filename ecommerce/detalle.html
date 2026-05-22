@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto - Footwear</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.prod.js"></script>
+    <link rel="stylesheet" href="style-detalle.css">
+</head>
+<body>
+
+    <div id="app" class="contenedor-pagina">
+        
+        <nav class="barra-navegacion">
+            <div class="logo">FOOTWEAR</div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Shop</a>
+                <a href="#">Help</a>
+            </div>
+            <button class="btn-carrito">🛒 Your Cart ({{ unidadesEnCarrito }})</button>
+        </nav>
+
+        <div class="bloque-producto">
+            
+            <div class="zona-imagenes">
+                <div class="foto-principal">
+                    <img v-bind:src="'assets/' + imagenSeleccionada" alt="Zapato Principal">
+                </div>
+                
+                <div class="galeria-miniaturas">
+                    <div 
+                        v-for="(foto, index) in producto.imagenes" 
+                        :key="index"
+                        class="miniatura"
+                        v-on:click="cambiarImagen(foto)"
+                    >
+                        <img v-bind:src="'assets/' + foto" alt="Miniatura">
+                    </div>
+                </div>
+            </div>
+
+            <div class="zona-info">
+                <h1>{{ producto.titulo }}</h1>
+                
+                <div class="calificacion">
+                    <span>⭐⭐⭐⭐☆</span> 
+                    <small>({{ producto.reviews }} Reviews)</small>
+                </div>
+
+                <p class="precio">${{ producto.precio }}</p>
+
+                <div class="opciones">
+                    <label>Select Model: </label>
+                    <select v-model="modeloSeleccionado">
+                        <option v-for="(modelo, index) in producto.modelos" :key="index" v-bind:value="modelo">
+                            {{ modelo }}
+                        </option>
+                    </select>
+                </div>
+
+                <p class="descripcion">{{ producto.descripcion }}</p>
+
+                <div class="acciones-compra">
+                    <button class="btn-añadir" v-on:click="agregarProducto">
+                        Add To Cart
+                    </button>
+                    <button class="btn-favorito">❤️</button>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="seccion-similares">
+            <h2>Similar Products</h2>
+            <div class="grid-similares">
+                <div v-for="(similar, index) in productosSimilares" :key="index" class="tarjeta-similar">
+                    <img v-bind:src="'assets/' + similar.foto" alt="Zapato Similar">
+                    <p>{{ similar.nombre }}</p>
+                    <strong>${{ similar.precio }}</strong>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./JS/detalle.js"></script>
+</body>
+</html>

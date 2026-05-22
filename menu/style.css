@@ -1,0 +1,117 @@
+/* --- Estilos Base Generales --- */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+/* Estructura base de cualquier barra de navegación */
+.navbar {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center; /* Alinea verticalmente el logo y los links */
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+
+/* --- Variaciones de Alineación (La magia de Flexbox) --- */
+
+/* 1. Logo a la izquierda y menú a la izquierda */
+.menu-izquierda {
+    justify-content: flex-start; 
+}
+.menu-izquierda .nav-links {
+    margin-left: 40px; /* Separa un poco el menú del logo */
+}
+
+/* 2. Logo en la mitad y menú a la mitad */
+.menu-centro {
+    flex-direction: column; /* Apila el logo arriba y el menú abajo */
+    justify-content: center;
+    text-align: center;
+}
+.menu-centro .nav-links {
+    margin-top: 10px; /* Separa los links del logo que está arriba */
+}
+
+/* 3. Logo a la derecha y todo el menú a la derecha */
+.menu-derecha {
+    justify-content: flex-end; 
+}
+.menu-derecha .logo {
+    order: 2; /* Mueve el logo visualmente después del menú */
+    margin-left: 40px; /* Separa el logo del menú */
+}
+.menu-derecha .nav-links {
+    order: 1; /* Asegura que el menú vaya primero a la izquierda */
+}
+
+/* 4. Estilos para el Menú Dividido */
+
+.menu-dividido {
+    display: flex;
+    justify-content: space-between; /* Distribuye los 3 bloques equitativamente */
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Forzamos a que ambos bloques de enlaces midan lo mismo */
+.menu-dividido .nav-links {
+    flex: 1; 
+    display: flex;
+}
+
+/* Los enlaces de la izquierda se alinean al inicio (izquierda) */
+.menu-dividido .nav-links:first-of-type {
+    justify-content: flex-start;
+}
+
+/* Los enlaces de la derecha se alinean al final (derecha) */
+.menu-dividido .nav-links:last-of-type {
+    justify-content: flex-end;
+}
+
+/* Estilos base para que se vea igual al tuyo */
+.menu-dividido .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    flex-shrink: 0; /* Evita que el logo se encoja */
+    padding: 0 20px; /* Espacio a los lados del logo */
+}
+
+.menu-dividido .nav-links a {
+    text-decoration: none;
+    color: #666;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu-dividido .nav-links a:hover {
+    color: #007bff;
+}

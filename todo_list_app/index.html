@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.prod.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     
+    <div id="app" class="phone-container">
+        <header class="header">
+            <div>
+                <h1>Hello Jack,</h1>
+                <p class="subtitle">You have work today</p>
+            </div>
+            <div class="header-icons">
+                <span class="icon">🔔</span>
+                <span class="icon">⚙️</span>
+            </div>
+        </header>
+
+        <section class="stats-grid">
+            <div class="card card-purple">
+                <span class="card-icon">🕒</span>
+                <span class="card-title">Today</span>
+                <span class="card-count">{{ tareasHoy.length }}</span>
+            </div>
+            <div class="card card-yellow">
+                <span class="card-icon">📅</span>
+                <span class="card-title">Scheduled</span>
+                <span class="card-count">5</span>
+            </div>
+            <div class="card card-green">
+                <span class="card-icon">🔄</span>
+                <span class="card-title">All</span>
+                <span class="card-count">{{ tareas.length }}</span>
+            </div>
+            <div class="card card-pink">
+                <span class="card-icon">⚠️</span>
+                <span class="card-title">Overdue</span>
+                <span class="card-count">3</span>
+            </div>
+        </section>
+
+        <section class="add-task-section">
+            <input 
+                type="text" 
+                v-model="nuevaTarea" 
+                @keyup.enter="agregarTarea" 
+                placeholder="Añadir una nueva tarea..."
+            >
+            <button @click="agregarTarea"><span>+</span></button>
+        </section>
+
+        <section class="tasks-section">
+            <h2>Today's Task</h2>
+            
+            <div class="task-list">
+                <div 
+                    v-for="(tarea, index) in tareas" 
+                    :key="index" 
+                    class="task-item"
+                    :class="{ 'is-completed': tarea.completada }"
+                >
+                    <div class="task-main">
+                        <div class="checkbox-container" @click="toggleTarea(tarea)">
+                            <div class="custom-checkbox" :class="{ checked: tarea.completada }"></div>
+                        </div>
+                        
+                        <div class="task-info">
+                            <span class="task-meta">📅 Today 🕒 {{ tarea.hora }}</span>
+                            <p class="task-title">{{ tarea.titulo }}</p>
+                            
+                            <div v-if="tarea.subtareas && tarea.subtareas.length > 0" class="subtasks-list">
+                                <label v-for="(sub, sIndex) in tarea.subtareas" :key="sIndex" class="subtask-item">
+                                    <input type="checkbox" v-model="sub.completada">
+                                    <span :class="{ 'line-through': sub.completada }">{{ sub.texto }}</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="delete-btn" @click="eliminarTarea(index)">🗑️</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="./list.js"></script>
+</body>
+</html>

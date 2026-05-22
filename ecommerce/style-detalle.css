@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Contenedor que centra la página */
+.contenedor-pagina {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+/* Barra de Navegación */
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+.btn-carrito {
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Bloque Principal: Foto izquierda, Texto derecha */
+.bloque-producto {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Zona Izquierda (Imágenes) */
+.zona-imagenes {
+    flex: 1; /* Toma la mitad del espacio */
+}
+.foto-principal img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    background-color: #f5f5f5; /* Gris de marcador de posición */
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+.galeria-miniaturas {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+.miniatura img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Zona Derecha (Información) */
+.zona-info {
+    flex: 1; /* Toma la otra mitad */
+}
+.zona-info h1 {
+    font-size: 28px;
+    margin: 0 0 10px 0;
+}
+.calificacion {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.precio {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.opciones {
+    margin-bottom: 20px;
+}
+.opciones select {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.descripcion {
+    line-height: 1.5;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Botones de acción */
+.acciones-compra {
+    display: flex;
+    gap: 15px;
+}
+.btn-añadir {
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-favorito {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 10px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+hr {
+    margin: 50px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+/* Productos Similares Inferiores */
+.seccion-similares h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.grid-similares {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.tarjeta-similar {
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 10px;
+    text-align: center;
+    flex: 1;
+    border-radius: 4px;
+}
+.tarjeta-similar img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    background-color: #f5f5f5;
+    margin-bottom: 8px;
+}
+.tarjeta-similar p {
+    margin: 5px 0;
+    font-size: 13px;
+}
