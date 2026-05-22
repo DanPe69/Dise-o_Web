@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial #3</title>
+    <link rel="icon" href="./assets/icono.png" type="image/png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.prod.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+        <nav class="navbar-superior">
+            <div class="logo"><img src="./assets/icono.png" alt="icono"></div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">Product</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="nav-icons">
+                <span>🔍</span>
+                <span>🙍‍♂️</span>
+                <span>❤️</span>
+                <span class="cart-icon">🛒 <span class="badge">{{ carrito.length }}</span></span>
+            </div>
+        </nav>
+
+        <header class="hero-banner">
+            <div class="hero-texto">
+                <h1>Nuestras Flores</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="#" class="btn-shop">COLLECTION FlOWERS→</a>
+            </div>
+        </header>
+
+
+        </section>
+
+        <section class="productos">
+
+        <div id="app" class="product-page">
+
+             <!--(Producto 1)-->
+            
+            <div class="price-container1">
+                <img src="./assets/flor1.png" alt="flor">
+                <h3>Hydrangea</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime harum hic dolores nulla earum quaerat perspiciatis fugit quidem quo nihil deleniti quia quasi placeat, soluta odio aperiam officiis animi laboriosam?</p>
+                <span class="discount-pct">-{{ selectedVariant.discount }}%</span>
+                <span class="price-symbol">COP</span>
+                <span class="price-value">{{ formatPrice(selectedVariant.price) }}</span>
+                <span>⭐⭐⭐⭐☆</span>
+            </div>
+            <p class="old-price">
+                Precio recomendado: <s>COP {{ formatPrice(selectedVariant.oldPrice) }}</s>
+            </p>
+
+            <div class="selector">
+                <p>Tamaño: <strong>{{ selectedSize }}</strong></p>
+                <div class="chips">
+                    <button 
+                        v-for="size in sizes" 
+                        :key="size"
+                        @click="cambiarTamano(size)"
+                        :class="{ active: selectedSize === size }"
+                    >
+                        {{ size }}
+                    </button>
+                </div>
+            </div>
+
+
+            <!--(Producto 2)-->
+            <div class="price-container1">
+                <img src="./assets/flor1.png" alt="flor">
+                <h3>Hydrangea</h3>
+                <span class="discount-pct">-{{ selectedVariant.discount }}%</span>
+                <span class="price-symbol">COP</span>
+                <span class="price-value">{{ formatPrice(selectedVariant.price) }}</span>
+                <span>⭐⭐⭐⭐☆</span>
+            </div>
+            <p class="old-price">
+                Precio recomendado: <s>COP {{ formatPrice(selectedVariant.oldPrice) }}</s>
+            </p>
+
+            <div class="selector">
+                <p>Tamaño: <strong>{{ selectedSize }}</strong></p>
+                <div class="chips">
+                    <button 
+                        v-for="size in sizes" 
+                        :key="size"
+                        @click="cambiarTamano(size)"
+                        :class="{ active: selectedSize === size }"
+                    >
+                        {{ size }}
+                    </button>
+                </div>
+            </div>
+            <!--(Producto 3)-->
+                        <div class="price-container1">
+                <img src="./assets/flor1.png" alt="flor">
+                <h3>Hydrangea</h3>
+                <span class="discount-pct">-{{ selectedVariant.discount }}%</span>
+                <span class="price-symbol">COP</span>
+                <span class="price-value">{{ formatPrice(selectedVariant.price) }}</span>
+                <span>⭐⭐⭐⭐☆</span>
+            </div>
+            <p class="old-price">
+                Precio recomendado: <s>COP {{ formatPrice(selectedVariant.oldPrice) }}</s>
+            </p>
+
+            <div class="selector">
+                <p>Tamaño: <strong>{{ selectedSize }}</strong></p>
+                <div class="chips">
+                    <button 
+                        v-for="size in sizes" 
+                        :key="size"
+                        @click="cambiarTamano(size)"
+                        :class="{ active: selectedSize === size }"
+                    >
+                        {{ size }}
+                    </button>
+                </div>
+            </div>
+            <!--(Producto 4)-->
+                       <div class="price-container1">
+                <img src="./assets/flor1.png" alt="flor">
+                <h3>Hydrangea</h3>
+                <span class="discount-pct">-{{ selectedVariant.discount }}%</span>
+                <span class="price-symbol">COP</span>
+                <span class="price-value">{{ formatPrice(selectedVariant.price) }}</span>
+                <span>⭐⭐⭐⭐☆</span>
+            </div>
+            <p class="old-price">
+                Precio recomendado: <s>COP {{ formatPrice(selectedVariant.oldPrice) }}</s>
+            </p>
+
+            <div class="selector">
+                <p>Tamaño: <strong>{{ selectedSize }}</strong></p>
+                <div class="chips">
+                    <button 
+                        v-for="size in sizes" 
+                        :key="size"
+                        @click="cambiarTamano(size)"
+                        :class="{ active: selectedSize === size }"
+                    >
+                        {{ size }}
+                    </button>
+                </div>
+            </div>
+
+            
+        </div>
+        </section>
+
+        
+
+        </div>
+
+        <section>
+            <div><button>Mas</button></div>
+        </section>
+
+        <section class="seccion-testimonios">
+            <h2>Conocenos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <br><p><strong>- Danna Perez</strong></p>
+            <input type="text" v-model="Producto" placeholder="producto">
+            <button @click="Producto">Buscar</button>
+
+        </section>
+        
+        <section class="navbar-inferior">
+        <div class="logo"><img src="./assets/icono.png" alt="icono"></div>
+        <nav class="nav-links">
+            <a href="#">Inicio</a>
+            <a href="#">Shop</a>
+            <a href="#">Producto</a>
+            <a href="#">Blog</a>
+            <a href="#">Contacto</a>
+        </nav>
+        </section>
+
+        <footer> 
+        <p>© 2026 Parcial - ¡Persevera!</p>
+        </footer>
+        
+    <script src="./JS/shop.js"></script>
+
+
+
+</body>
+</html>
